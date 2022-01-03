@@ -1,5 +1,5 @@
-import streamlit as st
 import pandas as pd
+import streamlit as st
 
 def tfidf(documents_clean, vec):
     # Instantiate a TfidfVectorizer object
@@ -9,5 +9,4 @@ def tfidf(documents_clean, vec):
     X = X.T.toarray()
     # Create a DataFrame and set the vocabulary as the index
     df = pd.DataFrame(X, index=vec.get_feature_names())
-    st.dataframe(df)
     return df
